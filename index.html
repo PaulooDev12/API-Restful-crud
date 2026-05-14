@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>CRUD</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Cadastro de Usuários</h1>
+
+        <div class="field">
+            <input id="nome" placeholder=" " maxlength="39" required>
+            <label for="nome">Nome</label>
+        </div>
+
+        <div class="field1">
+            <input id="email" placeholder=" " maxlength="255" required>
+            <label for="email">Email</label>
+
+            <span id="erroNome" class="error-message">
+                Preencha todos os campos!
+            </span>
+        </div>
+
+        <div class="actions">
+            <button onclick="criarUsuario()">
+                Criar
+            </button>
+
+            <button onclick="listarUsuarios()">
+                Listar
+            </button>
+        </div>
+
+        <ul id="lista"></ul>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

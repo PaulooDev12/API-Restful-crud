@@ -1,0 +1,306 @@
+:root{
+    --bg: #161b2c;
+    --surface: #2b2d31;
+    --surface-hover: #313338;
+    --card: #232428;
+
+    --primary: #5865F2;
+    --primary-hover: #6d78f5;
+
+    --text: #f2f3f5;
+    --text-muted: #b5bac1;
+
+    --border: #3f4147;
+    --input: #1a1b1e;
+
+    --danger: #ed4245;
+
+    --shadow: rgba(0,0,0,0.35);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at top, #2b2d31 0%, #1e1f22 55%);
+
+    font-family: "Segoe UI", sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--text);
+}
+
+.container{
+    width: 100%;
+    max-width: 520px;
+
+    background-color: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    box-shadow:
+        0 12px 40px var(--shadow);
+}
+
+.container h1{
+    font-size: 2rem;
+    font-weight: 700;
+
+    text-align: center;
+
+    color: var(--text);
+
+    margin-bottom: 10px;
+}
+
+
+
+.field{
+    position: relative;
+    width: 100%;
+}
+
+.field input{
+    width: 100%;
+
+    padding: 18px 14px 10px;
+
+    border-radius: 10px;
+
+    border: 1px solid transparent;
+
+    background-color: var(--input);
+
+    color: var(--text);
+
+    outline: none;
+
+    font-size: 15px;
+
+    transition: 0.25s;
+}
+
+.field input:hover{
+    background-color: #202226;
+}
+
+.field input:focus{
+    border-color: var(--primary);
+
+    background-color: #202226;
+
+    box-shadow: 0 0 0 3px rgba(88,101,242,0.20);
+}
+
+.field label{
+    position: absolute;
+
+    left: 14px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--text-muted);
+
+    pointer-events: none;
+
+    transition: 0.2s ease;
+
+    background-color: transparent;
+
+    padding: 0 4px;
+}
+
+.field input:focus + label,
+.field input:not(:placeholder-shown) + label{
+    top: 0;
+
+    font-size: 12px;
+
+    background-color: var(--card);
+
+    color: var(--primary);
+}
+/*  ################################################################################################### 
+#################################################################################################
+##################################################################################################*/
+
+
+.field1{
+    position: relative;
+    width: 100%;
+}
+.field1 input{
+    width: 100%;
+
+    padding: 18px 14px 10px;
+
+    border-radius: 10px;
+
+    border: 1px solid transparent;
+
+    background-color: var(--input);
+
+    color: var(--text);
+
+    outline: none;
+
+    font-size: 15px;
+
+    transition: 0.25s;
+}
+.field input:hover{
+    background-color: #202226;
+}
+
+.field1 input:focus{
+    border-color: var(--primary);
+
+    background-color: #202226;
+
+    box-shadow: 0 0 0 3px rgba(88,101,242,0.20);
+}
+
+.field1 label{
+    position: absolute;
+
+    left: 14px;
+    top: 30%;
+
+    transform: translateY(-50%);
+
+    color: var(--text-muted);
+
+    pointer-events: none;
+
+    transition: 0.2s ease;
+
+    background-color: transparent;
+
+    padding: 0 4px;
+}
+
+.field1 input:focus + label,
+.field1 input:not(:placeholder-shown) + label{
+    top: 0;
+
+    font-size: 12px;
+
+    background-color: var(--card);
+
+    color: var(--primary);
+}
+.actions{
+    display: flex;
+    gap: 12px;
+}
+
+button{
+    flex: 1;
+
+    height: 46px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    color: white;
+
+    transition: 0.2s ease;
+
+    background-color: var(--primary);
+}
+
+button:hover{
+    background-color: var(--primary-hover);
+
+    transform: translateY(-2px);
+}
+
+button:active{
+    transform: scale(0.98);
+}
+
+
+
+#lista{
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 10px;
+}
+
+#lista li{
+    background-color: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    padding: 14px;
+
+    transition: 0.2s ease;
+}
+
+#lista li:hover{
+    background-color: var(--surface-hover);
+}
+
+
+.error-message{
+    display: block;
+
+    margin-top: 6px;
+
+    color: var(--danger);
+
+    font-size: 13px;
+
+    opacity: 0;
+
+    transition: 0.2s;
+}
+
+.error-message.show{
+    opacity: 1;
+}
+
+.input-erro{
+    border-color: var(--danger) !important;
+
+    animation: shake 0.25s;
+}
+
+@keyframes shake{
+    0%{ transform: translateX(0); }
+    25%{ transform: translateX(-4px); }
+    50%{ transform: translateX(4px); }
+    75%{ transform: translateX(-4px); }
+    100%{ transform: translateX(0); }
+}
