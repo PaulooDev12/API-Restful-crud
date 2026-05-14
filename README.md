@@ -3,8 +3,11 @@
 ---
 
 <h1>Tecnologias</h1>
+
 💻 Front-end: Html, css, js
+
 ⚙️ Backend: Java + spring boot
+
 🐬 Banco de dados: MySQL 
 
 ---
